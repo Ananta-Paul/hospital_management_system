@@ -1,107 +1,154 @@
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Numans");
+@import url("https://fonts.googleapis.com/css?family=Roboto:500");
+
+.login {
+  background-image: url("/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Numans", sans-serif;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f5f5f5;
-  transition: background-color 0.5s ease;
-}
-
-/* Container and Form Styles */
 .container {
-  width: fit-content;
-  margin: auto;
-  padding: 40px;
-  border-radius: 20px;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border: 8px solid white;
-  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
-              5px 5px 15px rgba(0, 0, 0, 0.35),
-              inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-              inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  height: 100%;
+  align-content: center;
+}
+
+.card {
+  height: 570px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.vcenter {
+  top: 50%;
   position: relative;
+  -ms-transform: translateY(-50%);
+  transform: translateY(10%);
 }
 
-.form-container {
-  display: none;
-  margin-bottom: 30px;
+.card-header h3 {
+  color: white;
 }
 
-.form-container-current {
+.center {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.form-container h2 {
-  font-family: "Rampart One", cursive;
-  font-size: 3.2em;
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  height: 100%;
+  background-color: #ffc312;
   color: black;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-align: center;
-  margin-bottom: 30px;
+  border: 0 !important;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group-append span {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group {
+  margin: auto;
+  width: 90%;
+}
+
+.input-group-text {
+  height: 100%;
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+  color: white;
+}
+
+.remember input {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.login_btn {
+  color: black;
+  background-color: #ffc312;
+  width: 100px;
+}
+
+.login_btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.links {
+  color: white;
+}
+
+.links a {
+  margin-left: 4px;
+}
+
+.footer {
+  color: white;
+}
+
+.google-btn {
+  width: 184px;
+  height: 42px;
+  background-color: #4285f4;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.google-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.google-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 18px;
+  height: 18px;
+}
+
+.btn-text {
+  float: right;
+  margin: 11px 11px 0 0;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto";
+}
+
+.google-btn:hover {
+  box-shadow: 0 0 6px #4285f4;
+}
+
+.google-btn:active {
+  background: #1669f2;
 }
 
 .form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: black;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"],
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 5px;
-  font-size: 14px;
-  box-sizing: border-box;
-}
-
-.form-group select {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  background-color: white;
-  cursor: pointer;
-}
-
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group input[type="password"]:focus,
-.form-group select:focus {
-  outline: none;
-  border-color: #333;
-}
-
-button[type="submit"] {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  background-color: #333;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button[type="submit"]:hover {
-  background-color: #555;
+  margin-bottom: 1rem;
 }
