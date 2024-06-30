@@ -4,6 +4,7 @@ import HeaderP from "./HeaderProfile"; // Adjust the import path based on your p
 // import { use, client } from 'next/navigation';
 import Image from "next/image";
 import "./Cardiology.css";
+import { useRouter } from "next/navigation";
 
 const doctors = [
   {
@@ -30,14 +31,14 @@ const doctors = [
 ];
 
 const Cardiology = () => {
-  // const navigation = client(use);
+  const router= useRouter();
 
   const handleBookAppointment = () => {
     const isLoggedIn = false; // Replace this with actual login check
     if (isLoggedIn) {
-      navigation.push("/booking");
+      router.push("/booking");
     } else {
-      navigation.push("/login");
+      router.push("/login");
     }
   };
 
